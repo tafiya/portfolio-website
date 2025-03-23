@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import SkillPage from "@/components/pageComponant/skill/SkillPage";
 import { getAllSkills } from "@/service";
 import React from "react";

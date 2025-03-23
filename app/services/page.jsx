@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import ServicePage from "@/components/pageComponant/service/ServicePage";
 import { getAllService } from "@/service";
 import React from "react";
