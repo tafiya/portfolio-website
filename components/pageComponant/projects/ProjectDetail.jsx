@@ -25,13 +25,15 @@ const ProjectsDetails = ({ project }) => {
     mainImg,
     liveLink,
     githubServerLink,
+    githubClientLink,
     stack,
     category,
   } = project;
   const formattedDetails = details
-    .replace(/<h2>/g, '<h1 style="color: #FF5733; font-size: 2.5rem;">') // Red color and larger font for h1
-    .replace(/<h3>/g, '<h2 style="color: #33FF57; font-size: 2rem;">') // Green color and medium font for h2
-    .replace(/<p>/g, '<p style="font-size: 1.2rem;color: #33FF57; ">');
+    .replace(/<h2>/g, '<h1 style="color: #a4d2df; font-size: 2.5rem;">') // Red color and larger font for h1
+    .replace(/<h3>/g, '<h2 style="color: #a4d2df; font-size: 2rem;">') // Green color and medium font for h2
+    .replace(/<li>/g, '<p style="color: #999999; ">')
+    .replace(/<p>/g, '<p style="font-weight:600; color: #999999; ">');
 
   //   const [typeEffect] = useTypewriter({
   //     words: [category],
@@ -63,7 +65,7 @@ const ProjectsDetails = ({ project }) => {
           {/* Details Section */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center mt-10">
             <div className="space-y-8">
-              <div className="text-4xl font-medium text-balance text-outline h-10 ">
+              <div className="text-4xl font-medium text-balance h-10 text-accent ">
                 {title}
               </div>
               <h1 className="text-3xl font-bold text-white capitalize">
@@ -94,10 +96,6 @@ const ProjectsDetails = ({ project }) => {
                     Tafiyatul Jannat
                   </span>
                   <span className="text-sm text-gray-400">Project Author</span>
-                  <p className="flex items-center text-accent underline rounded-full py-1 text-sm">
-                    <FaCalendar className="mr-2" />
-                    {dayjs(project.createdAt).format("MM/DD/YYYY")}
-                  </p>
                 </div>
               </div>
               <div className="border border-white/20"></div>
@@ -107,11 +105,26 @@ const ProjectsDetails = ({ project }) => {
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-16 h-16 rounded-full bg-white/5 flex justify-center items-center">
-                          <ExternalLink className="text-white text-2xl hover:text-accent" />
+                          <ExternalLink className="text-accent text-3xl group-hover:text-white" />
                         </TooltipTrigger>
 
                         <TooltipContent>
                           <p>Live Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
+
+                {githubClientLink && (
+                  <Link href={githubClientLink}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-16 h-16 rounded-full bg-white/5 flex justify-center items-center">
+                          <BsGithub className="text-accent text-3xl group-hover:text-white" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Github Client Repository</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -122,10 +135,10 @@ const ProjectsDetails = ({ project }) => {
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-16 h-16 rounded-full bg-white/5 flex justify-center items-center">
-                          <BsGithub className="text-white text-2xl hover:text-accent" />
+                          <BsGithub className="text-accent text-3xl group-hover:text-white" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Github Client Repository</p>
+                          <p>Github Server Repository</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>

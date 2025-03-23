@@ -68,7 +68,7 @@ const ProjectsPage = ({ projects }) => {
                 {/* buttons */}
                 <div className=" flex items-center gap-4">
                   {/* live link */}
-                  <Link href={project?.githubClientLink}>
+                  <Link href={project?.liveLink}>
                     <TooltipProvider delayDuration={80}>
                       <Tooltip>
                         <TooltipTrigger
