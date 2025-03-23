@@ -95,7 +95,7 @@ const About = () => {
                 opacity: 1,
                 transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
             }}
-            className=" min-h-[80vh] flex items-center mt-24 justify-center py-12 xl:py-0">
+            className=" min-h-[80vh] flex items-center mt-12 mb-24 lg:my-24 justify-center ">
             <div className=" container mx-auto">
                 <Tabs
                     defaultValue="about"
@@ -104,47 +104,14 @@ const About = () => {
                         <div className="  order-1 xl:order-none mb-8 xl:mb-8">
                             <Photo></Photo>
                         </div>
-
-                        {/* <div>
-                            <h3 className=" text-4xl font-bold"> {education.title}</h3>
-                            <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
-                        </div> */}
                         <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 order-2 xl:order-none ">
                             <TabsTrigger value="about"> About Me</TabsTrigger>
                             <TabsTrigger value="education">Education</TabsTrigger>
 
                         </TabsList>
                     </div>
-
                     <div className=" min-h-[100vh] w-full">
-                        {/* <TabsContent value="experience" className="w-full">
-                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className=" text-4xl font-bold"> {experience.title}</h3>
-                                <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                                <ScrollArea className=" h-[480px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                                        {
-                                            experience.items.map((item, index) => {
-                                                return (
-                                                    <li key={index}
-                                                        className=" bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                                                        <span className="text-accent"> {item.duration}</span>
-                                                        <h3 className=" text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
-                                                        <div className=" flex items-center gap-3">
-                                                            <span className=" w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                            <p className=" text-white/60">{item.company}</p>
-                                                        </div>
-                                                    </li>
-                                                )
-                                            })
-                                        }
-
-                                    </ul>
-                                </ScrollArea>
-
-                            </div>
-                        </TabsContent> */}
-                        <TabsContent value="education" className="w-full">
+                        <TabsContent value="education" className="w-full pb-12">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className=" text-4xl font-bold"> {education.title}</h3>
                                 <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
@@ -180,9 +147,9 @@ const About = () => {
                                     {
                                         about.info.map((item, index) => {
                                             return (
-                                                <li key={index} className=" flex items-center justify-center xl:justify-start gap-4">
+                                                <li key={index} className=" flex items-center justify-center xl:justify-start gap-0 md:gap-4">
                                                     <span className=" text-white/60">{item.fieldName}:</span>
-                                                    <span className=" text-xl">{item.fieldValue}</span>
+                                                    <span className=" lg:text-xl md:text-lg text-base">{item.fieldValue}</span>
                                                 </li>
                                             )
                                         })

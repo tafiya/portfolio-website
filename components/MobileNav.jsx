@@ -18,14 +18,18 @@ const links = [
         path: "/skills"
     },
     {
-        name: "Services",
-        path: "/services"
-    },
-
-    {
         name: "Projects",
         path: "/projects"
     },
+    {
+        name: "Services",
+        path: "/services"
+    },
+    {
+        name: "Blogs",
+        path: "/blogs"
+    },
+  
     {
         name: "Contact",
         path: "/contact"

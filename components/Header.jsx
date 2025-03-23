@@ -5,7 +5,7 @@ import Nav from './Nav';
 const Header = () => {
     return (
         <header className='xl:py-0 fixed bottom-0 w-full z-20 shadow-lg'>
-            <div className='bg-[#fdfdfd]  container w-[40%] rounded-full py-2 mx-auto hidden xl:flex justify-center items-center'>
+            <div className='bg-[#ffffff] py-2 mx-auto hidden xl:flex justify-center items-center'>
                 {/* Desktop Nav & Hire Me Button */}
                 <div className='hidden xl:flex items-center text-black gap-8'>
                     <Nav />
